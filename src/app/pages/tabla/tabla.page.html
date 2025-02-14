@@ -10,4 +10,24 @@
       <ion-title size="large">tabla</ion-title>
     </ion-toolbar>
   </ion-header>
+
+<ion-card>
+
+  <ion-list>
+    <ion-item>
+      <ion-input [(ngModel)]="numero" type="number" inputmode="numeric" placeholder="Ingrese un numero"> </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-button (click)="calcularTabla()"> Generar Tabla </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-list> 
+    <ion-item *ngFor="let item of resultado">
+      <ion-label> {{item}} </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-card>
+
 </ion-content>
